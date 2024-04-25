@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2d2c4cfe6dfc250f82ffa141e78e597e {
+                    position: relative;
+                    width: 900.0px;
+                    height: 850.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5e80f288cfc640f645c7cbefe413a5e0 {
+                    position: relative;
+                    width: 900.0px;
+                    height: 850.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2d2c4cfe6dfc250f82ffa141e78e597e" ></div>
+        
+    
+            <div class="folium-map" id="map_5e80f288cfc640f645c7cbefe413a5e0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2d2c4cfe6dfc250f82ffa141e78e597e = L.map(
+                "map_2d2c4cfe6dfc250f82ffa141e78e597e",
+                {
+                    center: [39.719431719268385, -101.83564156031662],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_97980469ba76036dd331e6d1b376192e = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var map_5e80f288cfc640f645c7cbefe413a5e0 = L.map(
+                "map_5e80f288cfc640f645c7cbefe413a5e0",
+                {
+                    center: [39.719431719268385, -101.83564156031662],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9d1722d8c6cbd06dadd6cd035e01f932 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5e80f288cfc640f645c7cbefe413a5e0);
+        
+    
+            var tile_layer_0213a72f8b5a9264e760f47189303082 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var tile_layer_88f0810904aa0080811ecb99763e2a1b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var layer_control_564e2c45fe07ed0d8bd12908e8740b86 = {
+                base_layers : {
+                    "Carto Positron" : tile_layer_0213a72f8b5a9264e760f47189303082,
+                    "OpenStreet Map" : tile_layer_88f0810904aa0080811ecb99763e2a1b,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_564e2c45fe07ed0d8bd12908e8740b86.base_layers,
+                layer_control_564e2c45fe07ed0d8bd12908e8740b86.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+            tile_layer_88f0810904aa0080811ecb99763e2a1b.remove();
+        
+    
+            var marker_c0ab86fdd5f59a7e094dbbe65420cbf3 = L.marker(
+                [35.225893028651, -80.852930192301],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_cbb4ff3622e86d1b724242e8893cb07b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c0ab86fdd5f59a7e094dbbe65420cbf3.setIcon(icon_cbb4ff3622e86d1b724242e8893cb07b);
+        
+    
+        var popup_fbebec59ef80ab9259240a8949070931 = L.popup({"maxWidth": 1080});
+
+        
+            
+                var html_af51b012965b8b76156709387b087ed5 = $(`<div id="html_af51b012965b8b76156709387b087ed5" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Bank of America Stadium<br><b>Address:</b> 800 South Mint Street, Charlotte, Nc, 28202, Usa, Charlotte<br><b>Capacity:</b> 74867</div>`)[0];
+                popup_fbebec59ef80ab9259240a8949070931.setContent(html_af51b012965b8b76156709387b087ed5);
+            
+        
+
+        marker_c0ab86fdd5f59a7e094dbbe65420cbf3.bindPopup(popup_fbebec59ef80ab9259240a8949070931)
+        ;
+
+        
+    
+    
+            marker_c0ab86fdd5f59a7e094dbbe65420cbf3.bindTooltip(
+                `<div>
+                     Bank of America Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_14e8de1729b1c8fcc87137445534b5a6 = L.marker(
+                [41.8690108, -87.6258427],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_b219901a55e800859fe4936039560c4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_14e8de1729b1c8fcc87137445534b5a6.setIcon(icon_b219901a55e800859fe4936039560c4e);
+        
+    
+        var popup_c37c361993feb1f5876970bc4ed0b259 = L.popup({"maxWidth": 580});
+
+        
+            
+                var html_8812214518132691cd00917b42206d7f = $(`<div id="html_8812214518132691cd00917b42206d7f" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Soldier Field<br><b>Address:</b> 60605, Chicago, Il, Usa, Chicago<br><b>Capacity:</b> 61500</div>`)[0];
+                popup_c37c361993feb1f5876970bc4ed0b259.setContent(html_8812214518132691cd00917b42206d7f);
+            
+        
+
+        marker_14e8de1729b1c8fcc87137445534b5a6.bindPopup(popup_c37c361993feb1f5876970bc4ed0b259)
+        ;
+
+        
+    
+    
+            marker_14e8de1729b1c8fcc87137445534b5a6.bindTooltip(
+                `<div>
+                     Soldier Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b86c4b75120a0e4c624adc50609fa080 = L.marker(
+                [39.111203001398, -84.520954035465],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_4a64f28b74c4059d4b9700531065bc1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b86c4b75120a0e4c624adc50609fa080.setIcon(icon_4a64f28b74c4059d4b9700531065bc1b);
+        
+    
+        var popup_1ba2b993dfd7934526ecbe673ab080ad = L.popup({"maxWidth": 1020});
+
+        
+            
+                var html_ec99c1e7f15448afea4aa8d7bcc1d1f6 = $(`<div id="html_ec99c1e7f15448afea4aa8d7bcc1d1f6" style="width: 100.0%; height: 100.0%;"><b>Name:</b> TQL Stadium<br><b>Address:</b> 1501 Central Pkwy, Cincinnati, Oh, 45214, Usa, Cincinnati<br><b>Capacity:</b> 26000</div>`)[0];
+                popup_1ba2b993dfd7934526ecbe673ab080ad.setContent(html_ec99c1e7f15448afea4aa8d7bcc1d1f6);
+            
+        
+
+        marker_b86c4b75120a0e4c624adc50609fa080.bindPopup(popup_1ba2b993dfd7934526ecbe673ab080ad)
+        ;
+
+        
+    
+    
+            marker_b86c4b75120a0e4c624adc50609fa080.bindTooltip(
+                `<div>
+                     TQL Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b37f38ce6776ee3b19e8b8d3e8ae744 = L.marker(
+                [39.968444001846, -83.016751018826],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_47a666690d6dd02011041c8c88540359 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2b37f38ce6776ee3b19e8b8d3e8ae744.setIcon(icon_47a666690d6dd02011041c8c88540359);
+        
+    
+        var popup_2bc17d61c6acd378480441527f39bc03 = L.popup({"maxWidth": 1040});
+
+        
+            
+                var html_1061219710a0ec9901016fb0ec97f691 = $(`<div id="html_1061219710a0ec9901016fb0ec97f691" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Lower dot com Field<br><b>Address:</b> 96 Columbus Crew Way, Columbus, Oh, 43215, Usa, Columbus<br><b>Capacity:</b> 20371</div>`)[0];
+                popup_2bc17d61c6acd378480441527f39bc03.setContent(html_1061219710a0ec9901016fb0ec97f691);
+            
+        
+
+        marker_2b37f38ce6776ee3b19e8b8d3e8ae744.bindPopup(popup_2bc17d61c6acd378480441527f39bc03)
+        ;
+
+        
+    
+    
+            marker_2b37f38ce6776ee3b19e8b8d3e8ae744.bindTooltip(
+                `<div>
+                     Lower dot com Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c5b4fb0e3163e64106500338577d1a4b = L.marker(
+                [38.869076724569, -77.012383480096],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_04ec08eeeee61c876df9f6862850294e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c5b4fb0e3163e64106500338577d1a4b.setIcon(icon_04ec08eeeee61c876df9f6862850294e);
+        
+    
+        var popup_4e6c93e6cd8e2fc34784c03a9601431d = L.popup({"maxWidth": 1040});
+
+        
+            
+                var html_36f3cc9c9707fe6ecbd92e5246742851 = $(`<div id="html_36f3cc9c9707fe6ecbd92e5246742851" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Audi Field<br><b>Address:</b> 100 Potomac Ave Sw, Washington, Dc, 20024, Usa, Washington<br><b>Capacity:</b> 20000</div>`)[0];
+                popup_4e6c93e6cd8e2fc34784c03a9601431d.setContent(html_36f3cc9c9707fe6ecbd92e5246742851);
+            
+        
+
+        marker_c5b4fb0e3163e64106500338577d1a4b.bindPopup(popup_4e6c93e6cd8e2fc34784c03a9601431d)
+        ;
+
+        
+    
+    
+            marker_c5b4fb0e3163e64106500338577d1a4b.bindTooltip(
+                `<div>
+                     Audi Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d0be7d05dd04599fb4ad4cd044ad8963 = L.marker(
+                [26.194370983259, -80.171858985057],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_168714dc1a580d4ca9c5d3a1bfcc8eb5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d0be7d05dd04599fb4ad4cd044ad8963.setIcon(icon_168714dc1a580d4ca9c5d3a1bfcc8eb5);
+        
+    
+        var popup_421fa833c75107ae5a21b4b15a8a0c6b = L.popup({"maxWidth": 1080});
+
+        
+            
+                var html_72a7a442b841bad7a4770e2a998e5c92 = $(`<div id="html_72a7a442b841bad7a4770e2a998e5c92" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Chase Stadium<br><b>Address:</b> 1350 Nw 55Th St, Fort Lauderdale, Fl, 33309, Usa, Fort Lauderdale<br><b>Capacity:</b> 19100</div>`)[0];
+                popup_421fa833c75107ae5a21b4b15a8a0c6b.setContent(html_72a7a442b841bad7a4770e2a998e5c92);
+            
+        
+
+        marker_d0be7d05dd04599fb4ad4cd044ad8963.bindPopup(popup_421fa833c75107ae5a21b4b15a8a0c6b)
+        ;
+
+        
+    
+    
+            marker_d0be7d05dd04599fb4ad4cd044ad8963.bindTooltip(
+                `<div>
+                     Chase Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f75fb9aaf33f603fc53f3d371f9f4fb4 = L.marker(
+                [36.131467935183, -86.766718715043],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_397f753006136e62b4a37c9b8d6fbc97 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f75fb9aaf33f603fc53f3d371f9f4fb4.setIcon(icon_397f753006136e62b4a37c9b8d6fbc97);
+        
+    
+        var popup_89bbc9cf04fed756b240b0a898935e6d = L.popup({"maxWidth": 940});
+
+        
+            
+                var html_dc400113d8e3f6a4381b37e654a7bb1f = $(`<div id="html_dc400113d8e3f6a4381b37e654a7bb1f" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Geodis Park<br><b>Address:</b> 501 Benton Ave, Nashville, Tn, 37204, Usa, Nashville<br><b>Capacity:</b> 30000</div>`)[0];
+                popup_89bbc9cf04fed756b240b0a898935e6d.setContent(html_dc400113d8e3f6a4381b37e654a7bb1f);
+            
+        
+
+        marker_f75fb9aaf33f603fc53f3d371f9f4fb4.bindPopup(popup_89bbc9cf04fed756b240b0a898935e6d)
+        ;
+
+        
+    
+    
+            marker_f75fb9aaf33f603fc53f3d371f9f4fb4.bindTooltip(
+                `<div>
+                     Geodis Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_510393c03e5d128a8062a8cc5ac62380 = L.marker(
+                [40.828812122731, -73.927421166528],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_c48be0588202e8253057bba47427e709 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_510393c03e5d128a8062a8cc5ac62380.setIcon(icon_c48be0588202e8253057bba47427e709);
+        
+    
+        var popup_48c342a7b5c9d8148f8c604f1c241608 = L.popup({"maxWidth": 820});
+
+        
+            
+                var html_553fa67e05bb724ef1a76d9c5fd0d4fe = $(`<div id="html_553fa67e05bb724ef1a76d9c5fd0d4fe" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Yankee Stadium<br><b>Address:</b> 1 E 161St St, Bronx, Ny, 10451, Usa, New York City<br><b>Capacity:</b> 46537</div>`)[0];
+                popup_48c342a7b5c9d8148f8c604f1c241608.setContent(html_553fa67e05bb724ef1a76d9c5fd0d4fe);
+            
+        
+
+        marker_510393c03e5d128a8062a8cc5ac62380.bindPopup(popup_48c342a7b5c9d8148f8c604f1c241608)
+        ;
+
+        
+    
+    
+            marker_510393c03e5d128a8062a8cc5ac62380.bindTooltip(
+                `<div>
+                     Yankee Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_91bc5a9154adf9a5a79c37fe38448f3d = L.marker(
+                [40.736861010425, -74.150279962528],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_d1d2561c3e50d296533c3b27097f1479 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_91bc5a9154adf9a5a79c37fe38448f3d.setIcon(icon_d1d2561c3e50d296533c3b27097f1479);
+        
+    
+        var popup_deea239005016264312f7c45aa93a44a = L.popup({"maxWidth": 940});
+
+        
+            
+                var html_ba7627c5081d1eaabda9bdd3dad82763 = $(`<div id="html_ba7627c5081d1eaabda9bdd3dad82763" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Red Bull Arena<br><b>Address:</b> 600 Cape May St, Harrison, Nj, 07029, Usa, Harrison<br><b>Capacity:</b> 25000</div>`)[0];
+                popup_deea239005016264312f7c45aa93a44a.setContent(html_ba7627c5081d1eaabda9bdd3dad82763);
+            
+        
+
+        marker_91bc5a9154adf9a5a79c37fe38448f3d.bindPopup(popup_deea239005016264312f7c45aa93a44a)
+        ;
+
+        
+    
+    
+            marker_91bc5a9154adf9a5a79c37fe38448f3d.bindTooltip(
+                `<div>
+                     Red Bull Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5979c6157b0fd264ea2098af61dba0a8 = L.marker(
+                [28.540777991778, -81.388719967282],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_963f1ad85d5d64b284c977789bb1fc9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5979c6157b0fd264ea2098af61dba0a8.setIcon(icon_963f1ad85d5d64b284c977789bb1fc9e);
+        
+    
+        var popup_3f619bbc13f0ce0c5cb8ea5689cf63fc = L.popup({"maxWidth": 920});
+
+        
+            
+                var html_988028c63bc6d31c3aedd50c1a04bac4 = $(`<div id="html_988028c63bc6d31c3aedd50c1a04bac4" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Inter and Co Stadium<br><b>Address:</b> 655 W Church St, Orlando, Fl, 32805, Usa, Orlando<br><b>Capacity:</b> 25500</div>`)[0];
+                popup_3f619bbc13f0ce0c5cb8ea5689cf63fc.setContent(html_988028c63bc6d31c3aedd50c1a04bac4);
+            
+        
+
+        marker_5979c6157b0fd264ea2098af61dba0a8.bindPopup(popup_3f619bbc13f0ce0c5cb8ea5689cf63fc)
+        ;
+
+        
+    
+    
+            marker_5979c6157b0fd264ea2098af61dba0a8.bindTooltip(
+                `<div>
+                     Inter and Co Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b45bbdba4b7cec85bae1a0012429d514 = L.marker(
+                [39.828815995636, -75.383483979564],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_0f89d3328dc492b311973cab75683eca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b45bbdba4b7cec85bae1a0012429d514.setIcon(icon_0f89d3328dc492b311973cab75683eca);
+        
+    
+        var popup_bf4a033a4cf276248f11c80a0d1d3832 = L.popup({"maxWidth": 920});
+
+        
+            
+                var html_9d9f5b323cc415b8837bf8d92edecb44 = $(`<div id="html_9d9f5b323cc415b8837bf8d92edecb44" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Subaru Park<br><b>Address:</b> 2501 Seaport Dr, Chester, Pa, 19013, Usa, Chester<br><b>Capacity:</b> 18500</div>`)[0];
+                popup_bf4a033a4cf276248f11c80a0d1d3832.setContent(html_9d9f5b323cc415b8837bf8d92edecb44);
+            
+        
+
+        marker_b45bbdba4b7cec85bae1a0012429d514.bindPopup(popup_bf4a033a4cf276248f11c80a0d1d3832)
+        ;
+
+        
+    
+    
+            marker_b45bbdba4b7cec85bae1a0012429d514.bindTooltip(
+                `<div>
+                     Subaru Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1fecd4ee897728e53df6b282c271482b = L.marker(
+                [30.387724992068, -97.719413013067],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_81d794a7e70fe8b6f9e0c9b5afb04ad7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1fecd4ee897728e53df6b282c271482b.setIcon(icon_81d794a7e70fe8b6f9e0c9b5afb04ad7);
+        
+    
+        var popup_07f1c9eb86a525ecf35b5090dfd2c29e = L.popup({"maxWidth": 920});
+
+        
+            
+                var html_b856414e5580798783c311b4eae1ad6a = $(`<div id="html_b856414e5580798783c311b4eae1ad6a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Q2 Stadium<br><b>Address:</b> 10414 Mckalla Pl, Austin, Tx, 78758, Usa, Austin<br><b>Capacity:</b> 20738</div>`)[0];
+                popup_07f1c9eb86a525ecf35b5090dfd2c29e.setContent(html_b856414e5580798783c311b4eae1ad6a);
+            
+        
+
+        marker_1fecd4ee897728e53df6b282c271482b.bindPopup(popup_07f1c9eb86a525ecf35b5090dfd2c29e)
+        ;
+
+        
+    
+    
+            marker_1fecd4ee897728e53df6b282c271482b.bindTooltip(
+                `<div>
+                     Q2 Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_254f7a5131b5766d6e46cb44ccdf5d7c = L.marker(
+                [39.805813999756, -104.890605008644],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_f3ba68000e9b14c682da489dc7a44f9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_254f7a5131b5766d6e46cb44ccdf5d7c.setIcon(icon_f3ba68000e9b14c682da489dc7a44f9b);
+        
+    
+        var popup_4b0bcc9c3fdafaee60d3d8a0c472076a = L.popup({"maxWidth": 1060});
+
+        
+            
+                var html_52061468b7d08122b7a18c1f11d68400 = $(`<div id="html_52061468b7d08122b7a18c1f11d68400" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Dick's Sporting Goods Park<br><b>Address:</b> 6000 Victory Way, Commerce City, Co, 80022, Usa, Commerce City<br><b>Capacity:</b> 18061</div>`)[0];
+                popup_4b0bcc9c3fdafaee60d3d8a0c472076a.setContent(html_52061468b7d08122b7a18c1f11d68400);
+            
+        
+
+        marker_254f7a5131b5766d6e46cb44ccdf5d7c.bindPopup(popup_4b0bcc9c3fdafaee60d3d8a0c472076a)
+        ;
+
+        
+    
+    
+            marker_254f7a5131b5766d6e46cb44ccdf5d7c.bindTooltip(
+                `<div>
+                     Dick's Sporting Goods Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7a23112df42f818ddc8c3c3d5ba325bd = L.marker(
+                [33.154347987452, -96.83519297132],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_e46d4d513d8d04dcfe351555e2341789 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7a23112df42f818ddc8c3c3d5ba325bd.setIcon(icon_e46d4d513d8d04dcfe351555e2341789);
+        
+    
+        var popup_b4baf0c46f2e8744606c47382b71dcc2 = L.popup({"maxWidth": 960});
+
+        
+            
+                var html_b3a610c331544c2800c7841b3696d885 = $(`<div id="html_b3a610c331544c2800c7841b3696d885" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Toyota Stadium<br><b>Address:</b> 9200 World Cup Way, Frisco, Tx, 75033, Usa, Frisco<br><b>Capacity:</b> 20500</div>`)[0];
+                popup_b4baf0c46f2e8744606c47382b71dcc2.setContent(html_b3a610c331544c2800c7841b3696d885);
+            
+        
+
+        marker_7a23112df42f818ddc8c3c3d5ba325bd.bindPopup(popup_b4baf0c46f2e8744606c47382b71dcc2)
+        ;
+
+        
+    
+    
+            marker_7a23112df42f818ddc8c3c3d5ba325bd.bindTooltip(
+                `<div>
+                     Toyota Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f509a216efdf038afaac27da20089a4c = L.marker(
+                [29.752117982019, -95.352308990132],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_40c86326f4493ead544558f4c8b35bb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f509a216efdf038afaac27da20089a4c.setIcon(icon_40c86326f4493ead544558f4c8b35bb1);
+        
+    
+        var popup_83921d6bcb6f57ebc8785e63fddb4ce9 = L.popup({"maxWidth": 880});
+
+        
+            
+                var html_b6829cafe69b96952b7ddb5da9b5f284 = $(`<div id="html_b6829cafe69b96952b7ddb5da9b5f284" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Shell Energy Stadium<br><b>Address:</b> 2200 Texas St, Houston, Tx, 77003, Usa, Houston<br><b>Capacity:</b> 22039</div>`)[0];
+                popup_83921d6bcb6f57ebc8785e63fddb4ce9.setContent(html_b6829cafe69b96952b7ddb5da9b5f284);
+            
+        
+
+        marker_f509a216efdf038afaac27da20089a4c.bindPopup(popup_83921d6bcb6f57ebc8785e63fddb4ce9)
+        ;
+
+        
+    
+    
+            marker_f509a216efdf038afaac27da20089a4c.bindTooltip(
+                `<div>
+                     Shell Energy Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f113e7a357ce9b2620e5ea405b67c600 = L.marker(
+                [33.861919000681, -118.257666974448],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_0ab5ec7dfaa0e012371e6008a72ca49c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f113e7a357ce9b2620e5ea405b67c600.setIcon(icon_0ab5ec7dfaa0e012371e6008a72ca49c);
+        
+    
+        var popup_c9857160cf12dfc7d3e1fbf28cbb4191 = L.popup({"maxWidth": 940});
+
+        
+            
+                var html_16e0f7e1a56710e5424dbe565aaff8a9 = $(`<div id="html_16e0f7e1a56710e5424dbe565aaff8a9" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Dignity Health Sports Park<br><b>Address:</b> 18400 Avalon Blvd, Carson, Ca, 90746, Usa, Carson<br><b>Capacity:</b> 27000</div>`)[0];
+                popup_c9857160cf12dfc7d3e1fbf28cbb4191.setContent(html_16e0f7e1a56710e5424dbe565aaff8a9);
+            
+        
+
+        marker_f113e7a357ce9b2620e5ea405b67c600.bindPopup(popup_c9857160cf12dfc7d3e1fbf28cbb4191)
+        ;
+
+        
+    
+    
+            marker_f113e7a357ce9b2620e5ea405b67c600.bindTooltip(
+                `<div>
+                     Dignity Health Sports Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3db39a2f65aad24e3ef522dca954d560 = L.marker(
+                [34.013682996861, -118.286509019456],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_ec80553f85d0865ea341d236f55b4425 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3db39a2f65aad24e3ef522dca954d560.setIcon(icon_ec80553f85d0865ea341d236f55b4425);
+        
+    
+        var popup_3c790e8db4fa310b88191bfcd2b74155 = L.popup({"maxWidth": 1060});
+
+        
+            
+                var html_88321312451712ab8b349aec579e4488 = $(`<div id="html_88321312451712ab8b349aec579e4488" style="width: 100.0%; height: 100.0%;"><b>Name:</b> BMO Stadium<br><b>Address:</b> 3939 S Figueroa St, Los Angeles, Ca, 90037, Usa, Los Angeles<br><b>Capacity:</b> 22000</div>`)[0];
+                popup_3c790e8db4fa310b88191bfcd2b74155.setContent(html_88321312451712ab8b349aec579e4488);
+            
+        
+
+        marker_3db39a2f65aad24e3ef522dca954d560.bindPopup(popup_3c790e8db4fa310b88191bfcd2b74155)
+        ;
+
+        
+    
+    
+            marker_3db39a2f65aad24e3ef522dca954d560.bindTooltip(
+                `<div>
+                     BMO Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_29f3a2f6d39a2e280e27ebb586d82701 = L.marker(
+                [44.953178919364, -93.165545385874],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_ad52a3af90bc72e0136dc3efeead4c57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_29f3a2f6d39a2e280e27ebb586d82701.setIcon(icon_ad52a3af90bc72e0136dc3efeead4c57);
+        
+    
+        var popup_2bc487f144b623291fe4dd8b6ddf7ecc = L.popup({"maxWidth": 1040});
+
+        
+            
+                var html_4957daf2d112b58153081fcef294feac = $(`<div id="html_4957daf2d112b58153081fcef294feac" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Allianz Field<br><b>Address:</b> 400 Snelling Ave N, Saint Paul, Mn, 55104, Usa, Saint Paul<br><b>Capacity:</b> 19400</div>`)[0];
+                popup_2bc487f144b623291fe4dd8b6ddf7ecc.setContent(html_4957daf2d112b58153081fcef294feac);
+            
+        
+
+        marker_29f3a2f6d39a2e280e27ebb586d82701.bindPopup(popup_2bc487f144b623291fe4dd8b6ddf7ecc)
+        ;
+
+        
+    
+    
+            marker_29f3a2f6d39a2e280e27ebb586d82701.bindTooltip(
+                `<div>
+                     Allianz Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_666b606a7f933f1224f54b842a3670ac = L.marker(
+                [45.521806979329, -122.692524987595],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_4587da69f40c4c5dd6373825a4b37f56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_666b606a7f933f1224f54b842a3670ac.setIcon(icon_4587da69f40c4c5dd6373825a4b37f56);
+        
+    
+        var popup_0755f254c784d49ec0d1b6706f5cf88b = L.popup({"maxWidth": 1020});
+
+        
+            
+                var html_0b1e82a582853e5b49403db415e0d636 = $(`<div id="html_0b1e82a582853e5b49403db415e0d636" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Providence Park<br><b>Address:</b> 1844 Sw Morrison St, Portland, Or, 97205, Usa, Portland<br><b>Capacity:</b> 25218</div>`)[0];
+                popup_0755f254c784d49ec0d1b6706f5cf88b.setContent(html_0b1e82a582853e5b49403db415e0d636);
+            
+        
+
+        marker_666b606a7f933f1224f54b842a3670ac.bindPopup(popup_0755f254c784d49ec0d1b6706f5cf88b)
+        ;
+
+        
+    
+    
+            marker_666b606a7f933f1224f54b842a3670ac.bindTooltip(
+                `<div>
+                     Providence Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d78b5c47f6ba795d8d584582c56b078 = L.marker(
+                [40.583165991392, -111.893598023752],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_5c1db456809c99ad4fa9eefa07dc52b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0d78b5c47f6ba795d8d584582c56b078.setIcon(icon_5c1db456809c99ad4fa9eefa07dc52b9);
+        
+    
+        var popup_0e1b653ec528bb222b84a5541bd77a7d = L.popup({"maxWidth": 880});
+
+        
+            
+                var html_862e3f541715bfae9c53c752c35f325e = $(`<div id="html_862e3f541715bfae9c53c752c35f325e" style="width: 100.0%; height: 100.0%;"><b>Name:</b> America First Field<br><b>Address:</b> 9256 S State St, Sandy, Ut, 84070, Usa, Sandy<br><b>Capacity:</b> 20213</div>`)[0];
+                popup_0e1b653ec528bb222b84a5541bd77a7d.setContent(html_862e3f541715bfae9c53c752c35f325e);
+            
+        
+
+        marker_0d78b5c47f6ba795d8d584582c56b078.bindPopup(popup_0e1b653ec528bb222b84a5541bd77a7d)
+        ;
+
+        
+    
+    
+            marker_0d78b5c47f6ba795d8d584582c56b078.bindTooltip(
+                `<div>
+                     America First Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c017ebfe694e076813326d8b7eb6c3ac = L.marker(
+                [37.350568020414, -121.924842988106],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_cbb4b3df5b7a2b66065721e9ec7d7058 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c017ebfe694e076813326d8b7eb6c3ac.setIcon(icon_cbb4b3df5b7a2b66065721e9ec7d7058);
+        
+    
+        var popup_d8f86d4b714105f095a50e5e536d6938 = L.popup({"maxWidth": 960});
+
+        
+            
+                var html_d4cd24163e8bfe6ffcbb820f842a8f5a = $(`<div id="html_d4cd24163e8bfe6ffcbb820f842a8f5a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> PayPal Park<br><b>Address:</b> 1123 Coleman Ave, San Jose, Ca, 95110, Usa, San Jose<br><b>Capacity:</b> 18000</div>`)[0];
+                popup_d8f86d4b714105f095a50e5e536d6938.setContent(html_d4cd24163e8bfe6ffcbb820f842a8f5a);
+            
+        
+
+        marker_c017ebfe694e076813326d8b7eb6c3ac.bindPopup(popup_d8f86d4b714105f095a50e5e536d6938)
+        ;
+
+        
+    
+    
+            marker_c017ebfe694e076813326d8b7eb6c3ac.bindTooltip(
+                `<div>
+                     PayPal Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fb1a4cb7354f6baa67e0a3dac380ef2 = L.marker(
+                [39.121624012069, -94.824224028189],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_de1c5b3efc533db0315834f94aed331d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4fb1a4cb7354f6baa67e0a3dac380ef2.setIcon(icon_de1c5b3efc533db0315834f94aed331d);
+        
+    
+        var popup_b12625788c7f367e32c8c08969c01e88 = L.popup({"maxWidth": 980});
+
+        
+            
+                var html_daf5d18df3fb0c185173ec0563e702f3 = $(`<div id="html_daf5d18df3fb0c185173ec0563e702f3" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Children's Mercy Park<br><b>Address:</b> 1 Sporting Way, Kansas City, Ks, 66111, Usa, Kansas City<br><b>Capacity:</b> 18467</div>`)[0];
+                popup_b12625788c7f367e32c8c08969c01e88.setContent(html_daf5d18df3fb0c185173ec0563e702f3);
+            
+        
+
+        marker_4fb1a4cb7354f6baa67e0a3dac380ef2.bindPopup(popup_b12625788c7f367e32c8c08969c01e88)
+        ;
+
+        
+    
+    
+            marker_4fb1a4cb7354f6baa67e0a3dac380ef2.bindTooltip(
+                `<div>
+                     Children's Mercy Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cbf47eb31bd42b49ec7854b1383a15bd = L.marker(
+                [38.630201652497, -90.211175606622],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_570d24072ebf57c261ea4d6e55fd31e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cbf47eb31bd42b49ec7854b1383a15bd.setIcon(icon_570d24072ebf57c261ea4d6e55fd31e9);
+        
+    
+        var popup_fce9e50f1afcb42ad4f4a79034b6f55c = L.popup({"maxWidth": 980});
+
+        
+            
+                var html_c44dd3a590507704a9b0081b386ca1ff = $(`<div id="html_c44dd3a590507704a9b0081b386ca1ff" style="width: 100.0%; height: 100.0%;"><b>Name:</b> City Park<br><b>Address:</b> 2100 Market St, Saint Louis, Mo, 63103, Usa, St. Louis<br><b>Capacity:</b> 22423</div>`)[0];
+                popup_fce9e50f1afcb42ad4f4a79034b6f55c.setContent(html_c44dd3a590507704a9b0081b386ca1ff);
+            
+        
+
+        marker_cbf47eb31bd42b49ec7854b1383a15bd.bindPopup(popup_fce9e50f1afcb42ad4f4a79034b6f55c)
+        ;
+
+        
+    
+    
+            marker_cbf47eb31bd42b49ec7854b1383a15bd.bindTooltip(
+                `<div>
+                     City Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a4fe7bf83d9710e9927a7d7c33d7391e = L.marker(
+                [33.75465100806, -84.400785036572],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_1ea31c923769aee2cdb8168c74f1818c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a4fe7bf83d9710e9927a7d7c33d7391e.setIcon(icon_1ea31c923769aee2cdb8168c74f1818c);
+        
+    
+        var popup_d5359b5d9dec73c60074eb9ca1e92323 = L.popup({"maxWidth": 840});
+
+        
+            
+                var html_227ede18427883506ef41c209f97fdb6 = $(`<div id="html_227ede18427883506ef41c209f97fdb6" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Mercedes-Benz Stadium<br><b>Address:</b> 1 Amb Dr Nw, Atlanta, Ga, 30313, Usa, Atlanta<br><b>Capacity:</b> 71,000</div>`)[0];
+                popup_d5359b5d9dec73c60074eb9ca1e92323.setContent(html_227ede18427883506ef41c209f97fdb6);
+            
+        
+
+        marker_a4fe7bf83d9710e9927a7d7c33d7391e.bindPopup(popup_d5359b5d9dec73c60074eb9ca1e92323)
+        ;
+
+        
+    
+    
+            marker_a4fe7bf83d9710e9927a7d7c33d7391e.bindTooltip(
+                `<div>
+                     Mercedes-Benz Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7d81fcdf0a4a4fc5f40d1a2670ab84db = L.marker(
+                [42.081688592248, -71.276170625946],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_1ad6bb0da58d34f2d76f4757a60ffcca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7d81fcdf0a4a4fc5f40d1a2670ab84db.setIcon(icon_1ad6bb0da58d34f2d76f4757a60ffcca);
+        
+    
+        var popup_06919f310a8e21e10bd2e17e5454c3b1 = L.popup({"maxWidth": 920});
+
+        
+            
+                var html_944da2111810ffbba9d399104eb04bf6 = $(`<div id="html_944da2111810ffbba9d399104eb04bf6" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Gillette Stadium<br><b>Address:</b> 1 Patriot Place, Foxboro, Ma, 02035, Usa, Foxborough<br><b>Capacity:</b> 65,878</div>`)[0];
+                popup_06919f310a8e21e10bd2e17e5454c3b1.setContent(html_944da2111810ffbba9d399104eb04bf6);
+            
+        
+
+        marker_7d81fcdf0a4a4fc5f40d1a2670ab84db.bindPopup(popup_06919f310a8e21e10bd2e17e5454c3b1)
+        ;
+
+        
+    
+    
+            marker_7d81fcdf0a4a4fc5f40d1a2670ab84db.bindTooltip(
+                `<div>
+                     Gillette Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0dc72d363b468f293c09e708987297be = L.marker(
+                [32.74771600624, -97.093034981328],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_48720f52903a0c1d8c429d3d43ea4183 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0dc72d363b468f293c09e708987297be.setIcon(icon_48720f52903a0c1d8c429d3d43ea4183);
+        
+    
+        var popup_4310af506ece8c0d7fc7ffc7c4d0d008 = L.popup({"maxWidth": 860});
+
+        
+            
+                var html_e3b6fcd17eb558fb53458352411d2665 = $(`<div id="html_e3b6fcd17eb558fb53458352411d2665" style="width: 100.0%; height: 100.0%;"><b>Name:</b> AT&T Stadium<br><b>Address:</b> 1 At T Way, Arlington, Tx, 76011, Usa, Arlington<br><b>Capacity:</b> 80,000</div>`)[0];
+                popup_4310af506ece8c0d7fc7ffc7c4d0d008.setContent(html_e3b6fcd17eb558fb53458352411d2665);
+            
+        
+
+        marker_0dc72d363b468f293c09e708987297be.bindPopup(popup_4310af506ece8c0d7fc7ffc7c4d0d008)
+        ;
+
+        
+    
+    
+            marker_0dc72d363b468f293c09e708987297be.bindTooltip(
+                `<div>
+                     AT&T Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7b86e086a3246b5eef7017a174052442 = L.marker(
+                [29.683273947951, -95.407928765785],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_20347c926248f3be9b3c0231aecc709c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7b86e086a3246b5eef7017a174052442.setIcon(icon_20347c926248f3be9b3c0231aecc709c);
+        
+    
+        var popup_4f1355d74f597c3d9cdbbb49c7cb85a4 = L.popup({"maxWidth": 780});
+
+        
+            
+                var html_00ca5ebc8cf0b4556bc07ab0c1fce591 = $(`<div id="html_00ca5ebc8cf0b4556bc07ab0c1fce591" style="width: 100.0%; height: 100.0%;"><b>Name:</b> NRG Stadium<br><b>Address:</b> Nrg Park, Houston, Tx, 77054, Usa, Houston<br><b>Capacity:</b> 72,220</div>`)[0];
+                popup_4f1355d74f597c3d9cdbbb49c7cb85a4.setContent(html_00ca5ebc8cf0b4556bc07ab0c1fce591);
+            
+        
+
+        marker_7b86e086a3246b5eef7017a174052442.bindPopup(popup_4f1355d74f597c3d9cdbbb49c7cb85a4)
+        ;
+
+        
+    
+    
+            marker_7b86e086a3246b5eef7017a174052442.bindTooltip(
+                `<div>
+                     NRG Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c40085e0092663f8e76772323589f12e = L.marker(
+                [39.051430979302, -94.492721014886],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_8cb43456f48ceac506ee2b9bc1fc3e5c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c40085e0092663f8e76772323589f12e.setIcon(icon_8cb43456f48ceac506ee2b9bc1fc3e5c);
+        
+    
+        var popup_d9a4186beeeb6813d4c811a8c0367ee9 = L.popup({"maxWidth": 980});
+
+        
+            
+                var html_02ec2ca1e889ffabbeea7d653da6f414 = $(`<div id="html_02ec2ca1e889ffabbeea7d653da6f414" style="width: 100.0%; height: 100.0%;"><b>Name:</b> GEHA Field at Arrowhead Stadium<br><b>Address:</b> 1 Arrowhead Dr, Kansas City, Mo, 64129, Usa, Kansas City<br><b>Capacity:</b> 76,416</div>`)[0];
+                popup_d9a4186beeeb6813d4c811a8c0367ee9.setContent(html_02ec2ca1e889ffabbeea7d653da6f414);
+            
+        
+
+        marker_c40085e0092663f8e76772323589f12e.bindPopup(popup_d9a4186beeeb6813d4c811a8c0367ee9)
+        ;
+
+        
+    
+    
+            marker_c40085e0092663f8e76772323589f12e.bindTooltip(
+                `<div>
+                     GEHA Field at Arrowhead Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52546f56e9afe817f0da61a753137924 = L.marker(
+                [33.954948817929, -118.337495070055],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_263eece135fd99e86214e9888b6f91ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_52546f56e9afe817f0da61a753137924.setIcon(icon_263eece135fd99e86214e9888b6f91ee);
+        
+    
+        var popup_5229d4dde4c97a3edf38e48234dc4180 = L.popup({"maxWidth": 1000});
+
+        
+            
+                var html_31f6570fd9d175ce98aeb768ce4b71e9 = $(`<div id="html_31f6570fd9d175ce98aeb768ce4b71e9" style="width: 100.0%; height: 100.0%;"><b>Name:</b> SoFi Stadium<br><b>Address:</b> 1001 S Stadium Dr, Inglewood, Ca, 90305, Usa, Inglewood<br><b>Capacity:</b> 70,000</div>`)[0];
+                popup_5229d4dde4c97a3edf38e48234dc4180.setContent(html_31f6570fd9d175ce98aeb768ce4b71e9);
+            
+        
+
+        marker_52546f56e9afe817f0da61a753137924.bindPopup(popup_5229d4dde4c97a3edf38e48234dc4180)
+        ;
+
+        
+    
+    
+            marker_52546f56e9afe817f0da61a753137924.bindTooltip(
+                `<div>
+                     SoFi Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_57f0d07efebb606cdbc1c9b558be5128 = L.marker(
+                [25.957949010636, -80.239287037514],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_cfb6bed8821db3cccf0b59e0581bc16d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_57f0d07efebb606cdbc1c9b558be5128.setIcon(icon_cfb6bed8821db3cccf0b59e0581bc16d);
+        
+    
+        var popup_2b71393cacc5da07c650d07c71eb82db = L.popup({"maxWidth": 1060});
+
+        
+            
+                var html_6de3567d163b133666aeed415f527324 = $(`<div id="html_6de3567d163b133666aeed415f527324" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Hard Rock Stadium<br><b>Address:</b> 347 Don Shula Dr, Miami Gardens, Fl, 33056, Usa, Miami Gardens<br><b>Capacity:</b> 65,326</div>`)[0];
+                popup_2b71393cacc5da07c650d07c71eb82db.setContent(html_6de3567d163b133666aeed415f527324);
+            
+        
+
+        marker_57f0d07efebb606cdbc1c9b558be5128.bindPopup(popup_2b71393cacc5da07c650d07c71eb82db)
+        ;
+
+        
+    
+    
+            marker_57f0d07efebb606cdbc1c9b558be5128.bindTooltip(
+                `<div>
+                     Hard Rock Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_316e3b240a625b7e04a243712157664b = L.marker(
+                [40.814842656374, -74.078364778594],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_0271b745b89116f9f27db76bf4e15eaf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_316e3b240a625b7e04a243712157664b.setIcon(icon_0271b745b89116f9f27db76bf4e15eaf);
+        
+    
+        var popup_772be2b1c73e95ce1559da9cab151996 = L.popup({"maxWidth": 1180});
+
+        
+            
+                var html_755153e0eac38d56b4c3538fcb5e33c5 = $(`<div id="html_755153e0eac38d56b4c3538fcb5e33c5" style="width: 100.0%; height: 100.0%;"><b>Name:</b> MetLife Stadium<br><b>Address:</b> 1 Metlife Stadium Dr, East Rutherford, Nj, 07073, Usa, East Rutherford<br><b>Capacity:</b> 82,500</div>`)[0];
+                popup_772be2b1c73e95ce1559da9cab151996.setContent(html_755153e0eac38d56b4c3538fcb5e33c5);
+            
+        
+
+        marker_316e3b240a625b7e04a243712157664b.bindPopup(popup_772be2b1c73e95ce1559da9cab151996)
+        ;
+
+        
+    
+    
+            marker_316e3b240a625b7e04a243712157664b.bindTooltip(
+                `<div>
+                     MetLife Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8934fe6d15382485069cba9e4a600ac9 = L.marker(
+                [39.901854013978, -75.16722199282],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_ebbb4fb4de9ba44db1fd079339426d35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8934fe6d15382485069cba9e4a600ac9.setIcon(icon_ebbb4fb4de9ba44db1fd079339426d35);
+        
+    
+        var popup_770a27dd4f37cecfc2d53702095d8e56 = L.popup({"maxWidth": 1300});
+
+        
+            
+                var html_a588c4230337f16d8bb122d371a63815 = $(`<div id="html_a588c4230337f16d8bb122d371a63815" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Lincoln Financial Field<br><b>Address:</b> 1 Lincoln Financial Field Way, Philadelphia, Pa, 19148, Usa, Philadelphia<br><b>Capacity:</b> 67,594</div>`)[0];
+                popup_770a27dd4f37cecfc2d53702095d8e56.setContent(html_a588c4230337f16d8bb122d371a63815);
+            
+        
+
+        marker_8934fe6d15382485069cba9e4a600ac9.bindPopup(popup_770a27dd4f37cecfc2d53702095d8e56)
+        ;
+
+        
+    
+    
+            marker_8934fe6d15382485069cba9e4a600ac9.bindTooltip(
+                `<div>
+                     Lincoln Financial Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c28f57e5316cee82528728a867cc20fe = L.marker(
+                [37.403158008774, -121.96974199357],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_bac8d421f84480f0b80e80e06f44844b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c28f57e5316cee82528728a867cc20fe.setIcon(icon_bac8d421f84480f0b80e80e06f44844b);
+        
+    
+        var popup_cfedd394904beac6f03deeeaf4b515c0 = L.popup({"maxWidth": 1220});
+
+        
+            
+                var html_bf24aa696eb4a3c8dee91e118c82d6ba = $(`<div id="html_bf24aa696eb4a3c8dee91e118c82d6ba" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Levi's Stadium<br><b>Address:</b> 4900 Marie P Debartolo Way, Santa Clara, Ca, 95054, Usa, Santa Clara<br><b>Capacity:</b> 68,500</div>`)[0];
+                popup_cfedd394904beac6f03deeeaf4b515c0.setContent(html_bf24aa696eb4a3c8dee91e118c82d6ba);
+            
+        
+
+        marker_c28f57e5316cee82528728a867cc20fe.bindPopup(popup_cfedd394904beac6f03deeeaf4b515c0)
+        ;
+
+        
+    
+    
+            marker_c28f57e5316cee82528728a867cc20fe.bindTooltip(
+                `<div>
+                     Levi's Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1a174af65a650a4c93e356711fecf5b3 = L.marker(
+                [47.594548998212, -122.331612977354],
+                {}
+            ).addTo(map_2d2c4cfe6dfc250f82ffa141e78e597e);
+        
+    
+            var icon_4b82dc6906de39f62a4d2b855fa704c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "soccer-ball", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1a174af65a650a4c93e356711fecf5b3.setIcon(icon_4b82dc6906de39f62a4d2b855fa704c7);
+        
+    
+        var popup_ca8fb1d06a5e41e686d825c32c63fbad = L.popup({"maxWidth": 1020});
+
+        
+            
+                var html_505566404b030187e7cfdd8a6f1e436d = $(`<div id="html_505566404b030187e7cfdd8a6f1e436d" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Lumen Field<br><b>Address:</b> 800 Occidental Ave S, Seattle, Wa, 98134, Usa, Seattle<br><b>Capacity:</b> 68,740</div>`)[0];
+                popup_ca8fb1d06a5e41e686d825c32c63fbad.setContent(html_505566404b030187e7cfdd8a6f1e436d);
+            
+        
+
+        marker_1a174af65a650a4c93e356711fecf5b3.bindPopup(popup_ca8fb1d06a5e41e686d825c32c63fbad)
+        ;
+
+        
+    
+    
+            marker_1a174af65a650a4c93e356711fecf5b3.bindTooltip(
+                `<div>
+                     Lumen Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
