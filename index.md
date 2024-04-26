@@ -12,7 +12,7 @@ Before, jumping into MetLife stadium, let's look at where the Fifa world cup is 
 
 ![FIFA World Cup 2026](ok.jpg)
 
-As seen in the image, there are many other states with soccer stadiums. To understand what factors would have gone into account to choose where the world cup is hosted, I added the capacity factor to check.
+As seen in the image, there are many other states with soccer stadiums. To understand what factors would have gone into account to choose where the world cup is hosted, I added the capacity factor to check. The green markers show where where the world cup matches are hosted
 
 <iframe src="final_stadiums.html" height="600" width="1000"></iframe>
 you can explore this map [as its own web page here](final_stadiums.html).
