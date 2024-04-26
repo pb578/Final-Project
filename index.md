@@ -15,6 +15,7 @@ Before, jumping into MetLife stadium, let's look at where the Fifa world cup is 
 As seen in the image, there are many other states with soccer stadiums. To understand what factors would have gone into account to choose where the world cup is hosted, I added the capacity factor to check.
 
 <iframe src="final_stadiums.html" height="600" width="1000"></iframe>
+you can explore this map [as its own web page here](final_stadiums.html).
 
 As we could see all the stadiums selected for the world cup have higher capacity (>60,000) compared to the non-selected stadiums which had less than 50,000. 
 
@@ -32,6 +33,7 @@ As seen above, the transit usage in East Rutherford is very low and in general, 
 Finally, to check what is accessible from the MetLife stadium, a walking buffer of 15 mins was created 
 
 <iframe src="final_metlife.html" height="600" width="1000"></iframe>
+you can explore this map [as its own web page here](final_metlife.html).
 
 The map helps us understand that
   1. MetLife stadium is transit accessible within a walking distance
