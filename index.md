@@ -10,11 +10,11 @@ All the locations data were directly obtained from Wikipedia and google. The csv
 
 Before, jumping into MetLife stadium, let's look at where the Fifa world cup is happening across USA in 2026
 
-![FIFA World Cup 2026](main/ok.jpg)
+![FIFA World Cup 2026](ok.jpg)
 
 As seen in the image, there are many other states with soccer stadiums. To understand what factors would have gone into account to choose where the world cup is hosted, I added the capacity factor to check.
 
-[View Final Stadiums](main/final_stadiums.html)
+[View Final Stadiums](final_stadiums.html)
 
 As we could see all the stadiums selected for the world cup have higher capacity (>60,000) compared to the non-selected stadiums which had less than 50,000. 
 
@@ -24,13 +24,13 @@ Focusing back on the MetLife stadium, it is located in East Rutherford, Bergen C
 
 To understand how transit usage is in the county, I used ACS data to visualize the number of people using transit as a means of transportation to work
 
-![Transit Usage](main/ok2.jpg)
+![Transit Usage](ok2.jpg)
 
 As seen above, the transit usage in East Rutherford is very low and in general, Bergen County is poor in transit usage showing it's a very car-dependent neighborhood. 
 
 Finally, to check what is accessible from the MetLife stadium, a walking buffer of 15 mins was created 
 
-[View Final MetLife](main/final_metlife.html)
+[View Final MetLife](final_metlife.html)
 
 The map helps us understand that
   1. MetLife stadium is transit accessible within a walking distance
