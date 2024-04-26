@@ -1,6 +1,6 @@
-## Amenities Accessible From MetLife Stadium, NJ
-# Pavithran Balan
-# Command-Line GIS 34:970:595 (Spring 2024)
+# Amenities Accessible From MetLife Stadium, NJ
+## Pavithran Balan
+## Command-Line GIS 34:970:595 (Spring 2024)
 
 The aim of this project is to understand if the amenities around MetLife Stadium are accessible in a walking distance. 
 
@@ -26,6 +26,7 @@ To understand how transit usage is in the county, I used ACS data to visualize t
 
 ![Transit Usage](ok2.jpg)
 
+(High reliability areas blockgroups of Bergen County are hatched)
 As seen above, the transit usage in East Rutherford is very low and in general, Bergen County is poor in transit usage showing it's a very car-dependent neighborhood. 
 
 Finally, to check what is accessible from the MetLife stadium, a walking buffer of 15 mins was created 
